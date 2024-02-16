@@ -30,6 +30,13 @@ def recupListe(nom, numero):
     return output
 
 
+def minMax(liste: lists):
+    """
+        retourne la valeur max, min et moyenne d'une liste
+    """
+    max = liste.
+
+
 
 """MAIN PROGRAM"""
 
