@@ -1,0 +1,37 @@
+.Titre {
+    font-style: italic;
+    text-decoration: underline;
+    position: absolute;
+    left: 4%;
+}
+
+.sous-titretemp {
+    position: absolute;
+}
+
+.sous-titrehumidite {
+    position: absolute;
+}
+
+.sous-titrevent {
+    position: absolute;
+}
+
+.sous-titreprecip {
+    position: absolute;
+}
+
+.tempext {
+    display: flex;   
+}
+.humext {
+    display: flex;
+}
+
+.anemo {
+    display: flex;
+}
+
+.pluviometrie {
+    display: flex;
+}
