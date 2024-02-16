@@ -15,7 +15,6 @@ def recupData(_filename):
     output = [line for line in csvReader]
     return output
 
-datas = recupData("donneesMeteo23mars22.csv")
 
 def recupListe(nom, numero):
     """
@@ -30,7 +29,19 @@ def recupListe(nom, numero):
 
     return output
 
-print(recupListe(datas, 0))
+
+
+"""MAIN PROGRAM"""
+
+# récuperer le fichier
+datas = recupData("donneesMeteo23mars22.csv")
+
+# récuperer les données individuellements
+tempExt = recupListe(datas,1)
+humExt = recupListe(datas,2)
+vent = recupListe(datas,3)
+pluie = recupListe(datas,4)
+
 
 
 
