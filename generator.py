@@ -42,7 +42,9 @@ humExt = recupListe(datas,2)
 vent = recupListe(datas,3)
 pluie = recupListe(datas,4)
 
+# Cumul précipitations (Ulysse)
 
+def cumulPrecipitation(pluie):
+    pass
 
-
-
+# Création des images (Ulysse)
