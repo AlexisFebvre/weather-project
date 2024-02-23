@@ -48,12 +48,17 @@ def minMax(liste: list):
 datas = recupData("donneesMeteo23mars22.csv")
 
 # récuperer les données individuellements
-tempExt = recupListe(datas,1)
-humExt = recupListe(datas,2)
-vent = recupListe(datas,3)
-pluie = recupListe(datas,4)
+tempExt = recupListe(datas,1)   # températures en °C
+humExt = recupListe(datas,2)    # humidité en %
+vent = recupListe(datas,3)      # force du vent en km/h
+pluie = recupListe(datas,4)     # précipiptations en unité de 0.1mm
 
 print(minMax(tempExt))
+
+# récupération des moyennes, minimales et maximales
+tempMeta = minMax(tempExt)
+tempMini, tempMaxi, tempMoyenne = tempMeta[0],tempMeta[1],tempMeta[2]
+
 
 # Cumul précipitations (Ulysse)
 
