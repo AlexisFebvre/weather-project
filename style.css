@@ -14,7 +14,8 @@ body {
 
 .sous-titre {
     font-weight: 900;
-    padding-bottom: 0;
+
+    padding-top: 5%;
 }
 
 .image {
