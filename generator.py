@@ -25,16 +25,20 @@ def recupListe(nom, numero):
     """
     output = []
     for i in range(1, len(nom[numero])):
-        output.append(int(nom[numero][i]))
+        output.append(float(nom[numero][i]))
 
     return output
 
 
-def minMax(liste: lists):
+def minMax(liste: list):
     """
         retourne la valeur max, min et moyenne d'une liste
     """
-    max = liste.
+    _max = max(liste)
+    _min = min(liste)
+    mean = sum(liste)/len(liste)
+
+    return (_max, _min, mean)
 
 
 
@@ -48,6 +52,8 @@ tempExt = recupListe(datas,1)
 humExt = recupListe(datas,2)
 vent = recupListe(datas,3)
 pluie = recupListe(datas,4)
+
+print(minMax(tempExt))
 
 
 
