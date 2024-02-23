@@ -1,37 +1,23 @@
+
+/* CSS (Ulysse) */
+body {
+    color: #ffff;
+    background-color: pink;
+    padding-left: 5%;
+}
+
 .Titre {
     font-style: italic;
     text-decoration: underline;
-    position: absolute;
     left: 4%;
 }
 
-.sous-titretemp {
-    position: absolute;
+.sous-titre {
+    font-weight: 900;
+    padding-bottom: 0;
 }
 
-.sous-titrehumidite {
-    position: absolute;
-}
-
-.sous-titrevent {
-    position: absolute;
-}
-
-.sous-titreprecip {
-    position: absolute;
-}
-
-.tempext {
-    display: flex;   
-}
-.humext {
-    display: flex;
-}
-
-.anemo {
-    display: flex;
-}
-
-.pluviometrie {
-    display: flex;
+.image {
+    border: solid lightblue 1em;
+    border-radius: 15%;
 }
