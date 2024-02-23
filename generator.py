@@ -1,4 +1,5 @@
-import csv
+import csv, math
+import matplotlib.pyplot as plt
 
 ## FONCTIONS ##
 # récupère les données d'un ficher
@@ -68,7 +69,25 @@ def cumulPrecipitation(pluie):
         cumulprecip.append(0.1 * (pluie[i]))
     return cumulprecip   
 
-cumulPrecipitation(pluie)
-print(cumulPrecipitation(pluie))
+cumul = cumulPrecipitation(pluie)
 
 # Création des images (Ulysse)
+def genImagePlot(liste,moyenne,titreDuGraphique,nomFichierImage):
+    axeX = [j for j in range(0,len(liste))]
+
+    plt.plot(axeX, liste, label=titreDuGraphique)   # les valeures
+    plt.plot(axeX, [moyenne for i in range(len(axeX))], label=f"moyenne: {math.ceil(moyenne*10)/10}") # la moyenne des valeurs
+
+    # légende
+    plt.legend()
+
+    plt.savefig(nomFichierImage)
+    plt.close()
+
+
+
+# Generer toutes les images
+genImagePlot(tempExt, tempMoyenne, "Températures exterieures", "tempExt.png") # températures exterieurs
+genImagePlot(humExt, minMax(humExt)[2], "Humidité exterieures", "humExt.png") # humidité
+genImagePlot(vent, minMax(vent)[2], "Vitesse du vent", "vent.png") # vent
+genImagePlot(cumul, minMax(cumul)[2], "Précipitations", "pluie.png") # précipitation
