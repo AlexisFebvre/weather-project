@@ -45,7 +45,7 @@ def minMax(liste: list):
 """MAIN PROGRAM"""
 
 # récuperer le fichier
-datas = recupData("donneesMeteo23mars22.csv")
+datas = recupData("donneesMeteo27jan12.csv")
 
 # récuperer les données individuellements
 tempExt = recupListe(datas,1)
@@ -58,6 +58,12 @@ print(minMax(tempExt))
 # Cumul précipitations (Ulysse)
 
 def cumulPrecipitation(pluie):
-    pass
+    cumulprecip = []
+    for i in range(len(pluie)):
+        cumulprecip.append(0.1 * (pluie[i]))
+    return cumulprecip   
+
+cumulPrecipitation(pluie)
+print(cumulPrecipitation(pluie))
 
 # Création des images (Ulysse)
